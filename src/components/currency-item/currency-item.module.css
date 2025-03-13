@@ -6,6 +6,8 @@
     cursor: pointer;
     overflow-x: auto;
     flex-shrink: 0;
+    height: 50px;
+    box-sizing: border-box;
 }
 
 .currencyItem:hover {

@@ -5,6 +5,7 @@ import { CurrencyModel } from "@/models/currency-model";
 import EmptyContent from "@/components/empty-content/empty-content";
 import Preloader from "@/components/preloader/preloader";
 import { useMemo } from "react";
+import { FixedSizeList as List } from "react-window";
 
 export default function AssetsList(props: {
   assets: AssetModel[];
@@ -60,21 +61,31 @@ export default function AssetsList(props: {
       <div className={styles.assetsListBody}>
         <div className={styles.assetsListBodyHeading}>
           <p>Актив</p>
-          <p>Количество</p>
+          <p>Кол-во</p>
           <p>Цена</p>
-          <p>Общая стоимость</p>
+          <p>Стоимость</p>
           <p>Изм. за 24 ч.</p>
           <p>% портфеля</p>
         </div>
-        <ul>
-          {props.assets.map((asset) => (
-            <AssetItem
-              key={asset.name}
-              onClick={props.onAssetClick}
-              data={assetsData.get(asset.name)}
-            />
-          ))}
-        </ul>
+        <List
+          height={1000}
+          itemCount={props.assets.length}
+          itemSize={50}
+          width="100%"
+        >
+          {({ index, style }) => {
+            const asset = props.assets[index];
+            return (
+              <div style={style}>
+                <AssetItem
+                  key={asset.name}
+                  onClick={props.onAssetClick}
+                  data={assetsData.get(asset.name)}
+                />
+              </div>
+            );
+          }}
+        </List>
       </div>
     </div>
   );

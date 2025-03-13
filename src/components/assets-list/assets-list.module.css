@@ -17,10 +17,13 @@
 }
 
 .assetsListBodyHeading {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     gap: 8px;
-    justify-content: space-between;
-    padding: 16px 32px;
+    padding: 8px 32px;
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 50px;
     box-sizing: border-box;
 }
 
@@ -31,19 +34,14 @@
 }
 
 .assetsListBodyHeading p {
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-shrink: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 720px) {
     .assetsListBodyHeading p {
-        width: 100px;
-        text-align: left;
-        flex-shrink: 0;
-        justify-content: flex-start;
+        font-size: 12px;
     }
 }
