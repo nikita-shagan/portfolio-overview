@@ -27,7 +27,7 @@ Portfolio Overview — это веб-приложение на React для уп
 
 - **Фронтенд**: Next.js (React, TypeScript)
 - **Управление состоянием**: Redux Toolkit
-- **WebSocket**: Binance API через `socket.io-client`
+- **WebSocket**: Binance API
 - **Хранение данных**: IndexedDB через `idb`
 - **UI-библиотеки**: `classnames`, `react-window`
 
@@ -35,7 +35,7 @@ Portfolio Overview — это веб-приложение на React для уп
 
 1. Клонируйте репозиторий:
    ```sh
-   git clone https://github.com/yourusername/portfolio-overview.git
+   git clone https://github.com/nikita-shagan/portfolio-overview.git
    cd portfolio-overview
    ```
 2. Установите зависимости:
@@ -54,20 +54,3 @@ Portfolio Overview — это веб-приложение на React для уп
 - Цены обновляются в реальном времени через WebSocket.
 - Удаляйте активы кликом по ним.
 - Данные сохраняются локально и загружаются при перезапуске.
-
-## Развертывание
-
-Для деплоя на Vercel:
-
-```sh
-vercel
-```
-
-## Лицензия
-
-MIT
-
-## Автор
-
-[Ваше Имя]
-
