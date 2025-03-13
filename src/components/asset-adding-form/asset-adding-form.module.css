@@ -1,0 +1,38 @@
+.assetAddingForm {
+    display: flex;
+    flex-direction: column;
+    height: 540px;
+    box-sizing: border-box;
+    gap: 32px;
+    padding: 16px;
+}
+
+@media screen and (max-width: 720px) {
+    .assetAddingForm {
+        gap: 8px;
+        padding: 4px;
+        height: 340px;
+    }
+}
+
+.assetAddingFormData {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    min-height: 70px;
+}
+
+.assetAddingFormDataCurrency {
+    display: flex;
+    gap: 8px;
+}
+
+.assetAddingFormControls {
+    display: flex;
+    gap: 16px;
+}
+
+.assetAddingFormControls button {
+    flex-grow: 1;
+}

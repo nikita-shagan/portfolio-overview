@@ -1,0 +1,37 @@
+.currencyItem {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    padding: 16px 32px;
+    cursor: pointer;
+    overflow-x: auto;
+    flex-shrink: 0;
+}
+
+.currencyItem:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 720px) {
+    .currencyItem {
+        padding: 16px;
+    }
+}
+
+.currencyItem p {
+    min-width: 100px;
+}
+
+@media screen and (max-width: 720px) {
+    .currencyItem p{
+        min-width: 0;
+    }
+}
+
+.currencyItemPercent {
+    color: rgba(55, 190, 95, 255)
+}
+
+.currencyItemPercent_negative {
+    color: rgb(190, 55, 55)
+}
