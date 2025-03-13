@@ -1,44 +1,73 @@
-# Portfolio Overview
+# Обзор портфеля
 
-## Description
-Portfolio Overview is a React-based web application for managing and tracking a cryptocurrency portfolio with real-time price updates. It utilizes WebSockets for live data streaming, Redux Toolkit for state management, and IndexedDB for local persistence.
+## Описание
 
-## Features
-- **Asset List**: Displays portfolio assets with key details.
-- **Real-time Price Updates**: WebSocket integration with Binance API.
-- **Asset Management**: Add and remove assets.
-- **Local Storage**: Data persistence using IndexedDB.
-- **Performance Optimization**: Virtualized list for handling large asset collections.
-- **Responsive Design**: Adaptive UI for various screen sizes.
+Portfolio Overview — это веб-приложение на React для управления и отслеживания криптовалютного портфеля с обновлением
+данных в реальном времени.
+Оно использует WebSockets для потоковой передачи данных, Redux Toolkit для управления состоянием и IndexedDB для
+локального хранения.
 
-## Tech Stack
-- **Frontend**: Next.js (React, TypeScript)
-- **State Management**: Redux Toolkit
-- **WebSocket**: Binance API via `socket.io-client`
-- **Storage**: IndexedDB via `idb`
-- **UI Libraries**: `classnames`, `react-window`
+## Функциональность
 
-## Installation
-1. Clone the repository:
+- **Список активов**: Отображение криптовалют с основными данными.
+- **Обновления в реальном времени**: Интеграция с WebSocket API Binance.
+- **Управление активами**: Возможность добавлять и удалять активы.
+- **Локальное хранение**: Данные сохраняются в IndexedDB и восстанавливаются после перезагрузки страницы.
+- **Оптимизация производительности**: Виртуализированный список для работы с большим числом активов.
+- **Адаптивный дизайн**: Интерфейс, удобный для различных устройств.
+
+## Оптимизация производительности
+
+Для снижения нагрузки на интерфейс при частых обновлениях данных реализован механизм буферизации обновлений.
+Вместо мгновенной обработки каждого входящего сообщения WebSocket,
+обновления агрегируются в буфер и применяются с небольшой задержкой.
+Это уменьшает количество ререндеров и повышает плавность работы приложения.
+
+## Технологический стек
+
+- **Фронтенд**: Next.js (React, TypeScript)
+- **Управление состоянием**: Redux Toolkit
+- **WebSocket**: Binance API через `socket.io-client`
+- **Хранение данных**: IndexedDB через `idb`
+- **UI-библиотеки**: `classnames`, `react-window`
+
+## Установка
+
+1. Клонируйте репозиторий:
    ```sh
-   git clone https://github.com/nikita-shagan/portfolio-overview.git
+   git clone https://github.com/yourusername/portfolio-overview.git
    cd portfolio-overview
    ```
-2. Install dependencies:
+2. Установите зависимости:
    ```sh
    npm install
    ```
-3. Start the development server:
+3. Запустите сервер разработки:
    ```sh
    npm run dev
    ```
 
-## Usage
-- Open the app in a browser (`http://localhost:3000`).
-- Add assets using the provided form.
-- Prices update in real-time via WebSocket.
-- Remove assets by clicking on them.
-- Data is stored locally and persists across reloads.
+## Использование
 
-## Author
-Nikita Shagan
+- Откройте приложение в браузере (`http://localhost:3000`).
+- Добавляйте активы через форму.
+- Цены обновляются в реальном времени через WebSocket.
+- Удаляйте активы кликом по ним.
+- Данные сохраняются локально и загружаются при перезапуске.
+
+## Развертывание
+
+Для деплоя на Vercel:
+
+```sh
+vercel
+```
+
+## Лицензия
+
+MIT
+
+## Автор
+
+[Ваше Имя]
+
