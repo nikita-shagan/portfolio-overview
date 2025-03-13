@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Overview
 
-## Getting Started
+## Description
+Portfolio Overview is a React-based web application for managing and tracking a cryptocurrency portfolio with real-time price updates. It utilizes WebSockets for live data streaming, Redux Toolkit for state management, and IndexedDB for local persistence.
 
-First, run the development server:
+## Features
+- **Asset List**: Displays portfolio assets with key details.
+- **Real-time Price Updates**: WebSocket integration with Binance API.
+- **Asset Management**: Add and remove assets.
+- **Local Storage**: Data persistence using IndexedDB.
+- **Performance Optimization**: Virtualized list for handling large asset collections.
+- **Responsive Design**: Adaptive UI for various screen sizes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Frontend**: Next.js (React, TypeScript)
+- **State Management**: Redux Toolkit
+- **WebSocket**: Binance API via `socket.io-client`
+- **Storage**: IndexedDB via `idb`
+- **UI Libraries**: `classnames`, `react-window`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/nikita-shagan/portfolio-overview.git
+   cd portfolio-overview
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
+- Open the app in a browser (`http://localhost:3000`).
+- Add assets using the provided form.
+- Prices update in real-time via WebSocket.
+- Remove assets by clicking on them.
+- Data is stored locally and persists across reloads.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+Nikita Shagan
